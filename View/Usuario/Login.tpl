@@ -5,7 +5,7 @@
     <div class="card-panel pink darken-3"></div>
 
     <div class="container">
-    <form method="POST" action="?class=user&method=login">
+    <form method="POST" action="?class=Usuario&method=Login">
     <div class="row">
     <div class="input-field col s6">
       <input name="nombre" id="first_name2" type="text" class="validate">
