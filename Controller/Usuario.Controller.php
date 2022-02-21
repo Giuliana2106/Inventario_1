@@ -5,20 +5,39 @@
         public $con;
         public function __construct()
         {
-            $this->lib=new Libreria();
-            $this->con=new Conexion();
+            $this->usuario=new Usuario();
+            $this->smarty=new Smarty();
+            session_start();
         }
 
-        public function Inicio()
+        public function BuscarUsuario()
         {
-            $c="Usuario";
-            $v="Login";
-            $this->lib->CargaVista($c, $v);
-        }
+            $user=$_POST['user'];
+            $pass=$_POST['pass'];
+            
+            $u=$this->usuario->BuscarUsuario($user,$pass);
 
-        public function Fin()
-        {
-            echo "En usuario fin";
+            if($u->num_rows==1)
+            {
+                $arr=array();
+                while ($fila=mysqli_fetch_assoc($u))
+                {
+                    array_push($arr,$fila);
+                }
+                $_SESSION['id_Usuario']=$arr[0]['idUsuario'];
+                if ($arr[0]['Rol_idRol']==1)
+                {
+                    $this->smarty->assign('nav', 'Administrador');
+                    $this->smarty->assign('title','Administrador');
+                    $this->smarty->display('Administrador.tpl');
+                }
+                else if ($arr[0]['Rol_idRol']==2)
+                {
+                    $this->smarty->assign('nav', 'Trabajador');
+                    $this->smarty->assign('title','Trabajador');
+                    $this->smarty->display('Trabajador.tpl');
+                }
+            }
         }
     }
 ?>

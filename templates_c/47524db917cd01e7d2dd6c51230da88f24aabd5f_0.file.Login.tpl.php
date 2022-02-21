@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.0.4, created on 2022-02-21 04:43:32
+/* Smarty version 4.0.4, created on 2022-02-21 20:55:56
   from 'C:\xampp\htdocs\Inventario_1\View\Usuario\Login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.0.4',
-  'unifunc' => 'content_62130a646ebd90_06653646',
+  'unifunc' => 'content_6213ee4c4f3832_61245944',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '47524db917cd01e7d2dd6c51230da88f24aabd5f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Inventario_1\\View\\Usuario\\Login.tpl',
-      1 => 1645414989,
+      1 => 1645472611,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62130a646ebd90_06653646 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6213ee4c4f3832_61245944 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div align="center">
     <h1>Inicie Sesión</h1>
     </div>

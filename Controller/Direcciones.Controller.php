@@ -1,29 +1,37 @@
 <?php
     Class Direcciones
     {
-        public function VistaIngresarInvent()
+        public $smarty;
+        public $admin;
+        
+        public function __construct()
         {
-            $smarty = new Smarty();
-            $smarty->assign('nombre', 'Inventario');
-            $smarty->display('Inventario.tpl');
+            $this->smarty=new Smarty();
+            $this->admin = new Administrador();
+
+        public function Inventario()
+        {
+            $this->smarty->assign('nav', 'administrador');
+            $this->smarty->assign('rol','inventario');
+            $this->smarty->assign('title','Administrador');
+            $this->smarty->display('Administrador.tpl');
         }
 
-        public function VistaVerInvent()
+        public function VerInventario()
         {
-            $smarty = new Smarty();
-            $invent = new Invent();
-
-            $in = $invent->VerInventario();
-            $arr=array();
-
-            while($row=mysqli_fetch_assoc($in))
+            $p=$this->administrador->VerInventario($_SESSION['id_Usuario']);
+            $array=array();
+            while($row=mysqli_fetch_assoc($p))
             {
-                array_push($arr,$row);
+                array_push($array, $row);
             }
-
-            $smarty->assign('inventario', $arr);
-            $smarty->assign('nombre', 'Ver Inventario');
-            $smarty->display('VerInventario.tpl');
+            $this->smarty->assign('administrador', $array);
+            $this->smarty->assign('nav', 'administrador');
+            $this->smarty->assign('rol','verinventario');
+            $this->smarty->assign('title','Administrador');
+            $this->smarty->display('Administrador.tpl');
         }
+
+    }
     }
 ?>
