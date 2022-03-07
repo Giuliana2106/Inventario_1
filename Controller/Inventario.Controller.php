@@ -1,11 +1,6 @@
 <?php
     class Inventario
     {
-        public function VerInventario()
-        {
-            echo "En Ver Inventario";
-        }
-
         public function IngresoInventario()
         {
             $invent = new Invent();

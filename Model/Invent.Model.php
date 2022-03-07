@@ -1,10 +1,10 @@
 <?php
     class Invent
     {
-       public function GuardarInventario($n, $d, $c, $p, $f)
+       public function GuardarInventario($idP,$idM,$idC,$idU,$n,$d,$p,$c)
        {
             $con = new Conexion();
-            $consulta = $con->query("INSERT INTO INSERT INTO `producto`(`idProducto`, `Marca_idMarca`, `Categoria_idCategoria`, `Usuario_idUsuario`, `Nombre`, `Descripción`, `Precio`, `Cantidad`) VALUES ('$idP','$idM','$idC','$idU','$n','$d','$p','$c');");
+            $consulta = $con->query("INSERT INTO `producto`(`idProducto`, `Marca_idMarca`, `Categoria_idCategoria`, `Usuario_idUsuario`, `Nombre`, `Descripción`, `Precio`, `Cantidad`) VALUES ('$idP','$idM','$idC','$idU','$n','$d','$p','$c');");
             $con->close();
             return $consulta;
        }

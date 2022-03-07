@@ -7,19 +7,20 @@
         public function __construct()
         {
             $this->smarty=new Smarty();
-            $this->admin = new Administrador();
+            //$this->admin= new Admin();
+        }
 
         public function Inventario()
         {
             $this->smarty->assign('nav', 'administrador');
-            $this->smarty->assign('rol','inventario');
+            $this->smarty->assign('rol','Inventario');
             $this->smarty->assign('title','Administrador');
             $this->smarty->display('Administrador.tpl');
         }
 
         public function VerInventario()
         {
-            $p=$this->administrador->VerInventario($_SESSION['id_Usuario']);
+            $p=$this->admin->VerInventario($_SESSION['id_Usuario']);
             $array=array();
             while($row=mysqli_fetch_assoc($p))
             {
@@ -27,11 +28,11 @@
             }
             $this->smarty->assign('administrador', $array);
             $this->smarty->assign('nav', 'administrador');
-            $this->smarty->assign('rol','verinventario');
+            $this->smarty->assign('rol','Verinventario');
             $this->smarty->assign('title','Administrador');
             $this->smarty->display('Administrador.tpl');
         }
 
     }
-    }
+
 ?>

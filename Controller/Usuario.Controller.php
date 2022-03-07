@@ -3,19 +3,20 @@
     {
         public $lib;
         public $con;
+        public $usuarios;
         public function __construct()
         {
-            $this->usuario=new Usuario();
+            $this->usuarios=new User();
             $this->smarty=new Smarty();
             session_start();
         }
 
         public function BuscarUsuario()
         {
-            $user=$_POST['user'];
+            $user=$_POST['nombre'];
             $pass=$_POST['pass'];
             
-            $u=$this->usuario->BuscarUsuario($user,$pass);
+            $u=$this->usuarios->BuscarUsuario($user,$pass);
 
             if($u->num_rows==1)
             {

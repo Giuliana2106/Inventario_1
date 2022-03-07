@@ -1,4 +1,30 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.0.4, created on 2022-02-28 20:28:09
+  from 'C:\xampp\htdocs\Inventario_1\View\Trabajador.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.0.4',
+  'unifunc' => 'content_621d224912fc64_75491071',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'a09134d55f3cb16ccb1c098395f90d985e4d95b8' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Inventario_1\\View\\Trabajador.tpl',
+      1 => 1646076485,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:Navs/Navtrb.tpl' => 1,
+    'file:Trabajador/Inventario.tpl' => 1,
+    'file:Trabajador/VerInventario.tpl' => 1,
+  ),
+),false)) {
+function content_621d224912fc64_75491071 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html>
 
 <head>
@@ -24,7 +50,8 @@
         </div>
         <br></br>
         <div class="col s5">
-            {include file="Navs/Navtrb.tpl"}
+            <?php $_smarty_tpl->_subTemplateRender("file:Navs/Navtrb.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
         </div>
 
         <div class="col 1">
@@ -32,13 +59,15 @@
 
         <div class="col s5">
             <h1>Trabajador</h1>
-            {if isset($rol)}
-                {if $rol=='inventario'}
-                    {include file='Trabajador/Inventario.tpl'}
-                {else if $rol=='verinventario'}
-                    {include file='Trabajador/VerInventario.tpl'}
-                {/if}
-            {/if}
+            <?php if ((isset($_smarty_tpl->tpl_vars['rol']->value))) {?>
+                <?php if ($_smarty_tpl->tpl_vars['rol']->value == 'inventario') {?>
+                    <?php $_smarty_tpl->_subTemplateRender('file:Trabajador/Inventario.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+                <?php } elseif ($_smarty_tpl->tpl_vars['rol']->value == 'verinventario') {?>
+                    <?php $_smarty_tpl->_subTemplateRender('file:Trabajador/VerInventario.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+                <?php }?>
+            <?php }?>
         </div>
     </div>
 
@@ -71,7 +100,10 @@
     </footer>
     </div>
 
-    <script type="text/javascript" src="Framework/Materialize/js/materialize.min.js"></script>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="Framework/Materialize/js/materialize.min.js"><?php echo '</script'; ?>
+>
 </body>
 
-</html>
+</html><?php }
+}
