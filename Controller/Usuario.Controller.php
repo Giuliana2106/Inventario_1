@@ -26,6 +26,7 @@
                     array_push($arr,$fila);
                 }
                 $_SESSION['id_Usuario']=$arr[0]['idUsuario'];
+                $_SESSION['usuario']=$arr[0]['Nombre'];
                 if ($arr[0]['Rol_idRol']==1)
                 {
                     $this->smarty->assign('nav', 'Administrador');

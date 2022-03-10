@@ -21,7 +21,6 @@
     <div class="card-panel pink darken-4"></div>
 
     <div class="container">
-        {include file='Navs/Navad.tpl'}
         <div class="col s8">
             <form method="POST" action="?Controller=Inventario&Method=IngresoInventario">
 

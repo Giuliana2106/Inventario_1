@@ -21,7 +21,7 @@
     </div>
 
     <div class="row">
-        {include file='Navs/BarraLateral.tpl'}
+        {include file='Navs/Navad.tpl'}
         <div class="col s8">
             <table>
                 <thead>
@@ -38,6 +38,15 @@
                 <tbody>
                     {foreach from=$inventario item=$invent }
                         <tr>
+                            <td>
+                                {$invent['Producto']}
+                            </td>
+                            <td>
+                                {$invent['Marca']}
+                            </td>
+                            <td>
+                                {$invent['Categoría']}
+                            </td>
                             <td>
                                 {$invent['Nombre']}
                             </td>

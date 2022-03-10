@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.0.4, created on 2022-02-28 20:28:09
+/* Smarty version 4.0.4, created on 2022-03-10 03:57:31
   from 'C:\xampp\htdocs\Inventario_1\View\Trabajador.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.0.4',
-  'unifunc' => 'content_621d224912fc64_75491071',
+  'unifunc' => 'content_6229691bc27093_88652805',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a09134d55f3cb16ccb1c098395f90d985e4d95b8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Inventario_1\\View\\Trabajador.tpl',
-      1 => 1646076485,
+      1 => 1646703052,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:Trabajador/VerInventario.tpl' => 1,
   ),
 ),false)) {
-function content_621d224912fc64_75491071 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6229691bc27093_88652805 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -58,9 +58,8 @@ function content_621d224912fc64_75491071 (Smarty_Internal_Template $_smarty_tpl)
         </div>
 
         <div class="col s5">
-            <h1>Trabajador</h1>
             <?php if ((isset($_smarty_tpl->tpl_vars['rol']->value))) {?>
-                <?php if ($_smarty_tpl->tpl_vars['rol']->value == 'inventario') {?>
+                <?php if ($_smarty_tpl->tpl_vars['rol']->value == 'Inventario') {?>
                     <?php $_smarty_tpl->_subTemplateRender('file:Trabajador/Inventario.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
                 <?php } elseif ($_smarty_tpl->tpl_vars['rol']->value == 'verinventario') {?>

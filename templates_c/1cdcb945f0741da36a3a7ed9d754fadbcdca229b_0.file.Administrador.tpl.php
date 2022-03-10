@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.0.4, created on 2022-02-28 19:42:10
+/* Smarty version 4.0.4, created on 2022-03-08 02:31:00
   from 'C:\xampp\htdocs\Inventario_1\View\Administrador.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.0.4',
-  'unifunc' => 'content_621d17823192b2_74527718',
+  'unifunc' => 'content_6226b1d4415378_10542316',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1cdcb945f0741da36a3a7ed9d754fadbcdca229b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Inventario_1\\View\\Administrador.tpl',
-      1 => 1646073726,
+      1 => 1646703058,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:Navs/Navad.tpl' => 1,
     'file:Administrador/Inventario.tpl' => 1,
-    'file:Administrador/Rol.tpl' => 1,
     'file:Administrador/VerInventario.tpl' => 1,
   ),
 ),false)) {
-function content_621d17823192b2_74527718 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6226b1d4415378_10542316 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -59,13 +58,9 @@ function content_621d17823192b2_74527718 (Smarty_Internal_Template $_smarty_tpl)
         </div>
 
         <div class="col s5">
-            <h1>Administrador</h1>
             <?php if ((isset($_smarty_tpl->tpl_vars['rol']->value))) {?>
-                <?php if ($_smarty_tpl->tpl_vars['rol']->value == 'inventario') {?>
+                <?php if ($_smarty_tpl->tpl_vars['rol']->value == 'Inventario') {?>
                     <?php $_smarty_tpl->_subTemplateRender('file:Administrador/Inventario.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-                <?php } elseif ($_smarty_tpl->tpl_vars['rol']->value == 'nuevorol') {?>
-                    <?php $_smarty_tpl->_subTemplateRender('file:Administrador/Rol.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
                 <?php } elseif ($_smarty_tpl->tpl_vars['rol']->value == 'verinventario') {?>
                     <?php $_smarty_tpl->_subTemplateRender('file:Administrador/VerInventario.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

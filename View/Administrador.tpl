@@ -31,12 +31,9 @@
         </div>
 
         <div class="col s5">
-            <h1>Administrador</h1>
             {if isset($rol)}
-                {if $rol=='inventario'}
+                {if $rol=='Inventario'}
                     {include file='Administrador/Inventario.tpl'}
-                {else if $rol=='nuevorol'}
-                    {include file='Administrador/Rol.tpl'}
                 {else if $rol=='verinventario'}
                     {include file='Administrador/VerInventario.tpl'}
                 {/if}

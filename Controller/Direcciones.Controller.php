@@ -3,6 +3,7 @@
     {
         public $smarty;
         public $admin;
+
         
         public function __construct()
         {
@@ -12,6 +13,7 @@
 
         public function Inventario()
         {
+            //echo "hola";
             $this->smarty->assign('nav', 'administrador');
             $this->smarty->assign('rol','Inventario');
             $this->smarty->assign('title','Administrador');
@@ -20,13 +22,18 @@
 
         public function VerInventario()
         {
-            $p=$this->admin->VerInventario($_SESSION['id_Usuario']);
-            $array=array();
-            while($row=mysqli_fetch_assoc($p))
+            $smarty = new Smarty ();
+            $invent = new Invent ();
+
+            $in = $invent->VerInventario();
+            $arr=array();
+
+            while($row=mysqli_fetch_assoc($in))
             {
-                array_push($array, $row);
+                array_push($arr, $row);
             }
-            $this->smarty->assign('administrador', $array);
+
+            $this->smarty->assign('administrador', $arr);
             $this->smarty->assign('nav', 'administrador');
             $this->smarty->assign('rol','Verinventario');
             $this->smarty->assign('title','Administrador');

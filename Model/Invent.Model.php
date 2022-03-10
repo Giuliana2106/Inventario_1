@@ -12,7 +12,7 @@
        public function VerInventario()
        {
            $con = new Conexion();
-           $consulta = $con->query("SELECT * FROM `inventario`;");
+           $consulta = $con->query("SELECT * FROM `producto`;");
            $con->close();
            return $consulta;
        }
